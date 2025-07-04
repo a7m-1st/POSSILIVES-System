@@ -1,0 +1,79 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak
+    ports:
+      - "8080:8080"
+    environment:
+      - KEYCLOAK_ADMIN=soda
+      - KEYCLOAK_ADMIN_PASSWORD=hongyi123
+      - KC_IMPORT_REALM=true
+    command: start-dev --import-realm --hostname-strict=false --proxy-headers=xforwarded
+    volumes:
+      - ./keycloakify-starter-client/.keycloakify:/opt/keycloak/data/import
+      - keycloak_data:/opt/keycloak/data
+      - ./keycloakify-starter-client/dist_keycloak:/opt/keycloak/providers
+
+  backend:
+    build:
+      context: ./possilives_backend
+      target: dev
+    ports:
+      - "8081:8081"
+      - "5005:5005"
+    env_file:
+      - ./possilives_backend/main/src/main/resources/.env
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_DEVTOOLS_RESTART_ENABLED=true
+      - SPRING_DEVTOOLS_LIVERELOAD_ENABLED=true
+    networks:
+      - possilives-network
+    volumes:
+      - ./possilives_backend/main/src:/app/src
+      - ./possilives_backend/main/target:/app/target
+    depends_on:
+      - keycloak
+
+  # frontend:
+  #   build:
+  #     context: ./possilives_frontend
+  #     target: dev
+  #   ports:
+  #     - "3000:3000"  # Maps container port 80 to host port 3000
+  #   environment:
+  #     - WATCHPACK_POLLING=true
+  #     - CHOKIDAR_USEPOLLING=true
+  #   networks:
+  #     - possilives-network
+  #   depends_on:
+  #     - backend
+  #   volumes:
+  #     - ./possilives_frontend/src:/app/src
+  #     - ./possilives_frontend/public:/app/public
+  #     - node_modules:/app/node_modules
+
+  # ai:
+  #   build:
+  #     context: ./possilives_ai
+  #     target: dev
+  #   env_file:
+  #     - ./possilives_ai/.env
+  #   environment:
+  #     - PYTHONUNBUFFERED=1
+  #   networks:
+  #     - possilives-network
+  #   depends_on:
+  #     - backend
+  #   volumes:
+  #     - ai-data:/app/data
+
+networks:
+  possilives-network:
+    driver: bridge
+
+volumes:
+  backend-data:
+  ai-data:
+  node_modules:
+  keycloak_data:
