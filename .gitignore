@@ -1,0 +1,8 @@
+possilives_ai/.env
+possilives_ai/uploaded_file.mp4
+possilives_ai/__pycache__
+possilives_backend/.idea
+possilives_backend/main/main.iml
+possilives_backend/main/src/main/resources/.env
+possilives_frontend/.env
+possilives_backend/main/src/main/resources/application.properties
