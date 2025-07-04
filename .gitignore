@@ -6,3 +6,7 @@ possilives_backend/main/main.iml
 possilives_backend/main/src/main/resources/.env
 possilives_frontend/.env
 possilives_backend/main/src/main/resources/application.properties
+possilives_ai/uploaded_file.mp4.wav
+possilives_ai/uploaded_file.webm.wav
+possilives_ai/uploaded_file.webm
+possilives_ai/main.ipynb

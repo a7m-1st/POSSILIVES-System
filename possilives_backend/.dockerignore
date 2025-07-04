@@ -1,0 +1,26 @@
+# .dockerignore
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+.git/
+.idea/
+.vscode/
+**/.git
+**/.gitattributes
+**/.gitignore
+**/.idea
+**/.vscode
+**/*.iml
+**/target/
+!**/target/*.jar
+**/node_modules
+**/.classpath
+**/.project
+**/.settings
+**/HELP.md

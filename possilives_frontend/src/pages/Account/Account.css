@@ -1,0 +1,369 @@
+.account-container {
+  padding: 2rem 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Profile Header Styling */
+.account-header {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6C5CE7 0%, #8E44AD 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-details h1 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.profile-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.joined-date {
+  color: #718096;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Navigation Styling */
+.account-nav {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.account-nav .nav-link {
+  color: #4a5568;
+  padding: 1rem 1.5rem;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.account-nav .nav-link:hover {
+  background-color: #f7fafc;
+}
+
+.account-nav .nav-link.active {
+  background-color: rgba(108, 92, 231, 0.1);
+  color: #6C5CE7;
+  border-left: 4px solid #6C5CE7;
+}
+
+.nav-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Tab Content Styling */
+.tab-inner-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* User Details Cards */
+.info-card {
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-item {
+  margin-bottom: 0.5rem;
+}
+
+.info-item strong {
+  color: #4a5568;
+}
+
+.career-path {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.career-current, .career-future {
+  flex: 1;
+}
+
+.career-arrow {
+  font-size: 2rem;
+  color: #6C5CE7;
+  margin: 0 1rem;
+}
+
+.career-path h4 {
+  font-size: 1rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.career-path p {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+/* Personality Traits Styling */
+.personality-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.personality-traits {
+  margin-top: 1.5rem;
+}
+
+.personality-trait {
+  margin-bottom: 1.5rem;
+}
+
+.trait-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.trait-name {
+  color: #4a5568;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.trait-value {
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.trait-bar {
+  height: 10px;
+  border-radius: 10px;
+}
+
+.trait-description {
+  margin-top: 0.5rem;
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.personality-date {
+  text-align: right;
+  color: #a0aec0;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* Habits Styling */
+.habit-card {
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.habit-header h3 {
+  color: #2d3748;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.impact-badge {
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.habit-description {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.habit-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Generations Styling */
+.generation-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.generation-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.generation-card h3 {
+  color: #2d3748;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.generation-content {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.generation-content p {
+  margin-bottom: 1rem;
+}
+
+.generation-footer {
+  color: #a0aec0;
+}
+
+.generation-image-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.generation-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Empty State Styling */
+.empty-state {
+  text-align: center;
+  padding: 3rem 0;
+  color: #a0aec0;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .account-header {
+    padding: 1.5rem;
+  }
+  
+  .profile-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-stats {
+    justify-content: center;
+  }
+  
+  .account-nav {
+    margin-bottom: 1.5rem;
+  }
+  
+  .tab-inner-content {
+    padding: 1.5rem;
+  }
+  
+  .career-path {
+    flex-direction: column;
+  }
+  
+  .career-arrow {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .profile-details h1 {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+  }
+}

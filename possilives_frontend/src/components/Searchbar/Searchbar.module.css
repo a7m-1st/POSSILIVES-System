@@ -1,0 +1,20 @@
+.searchbar {
+  margin-top: 20px;
+  border-radius: 12px !important;
+  background-color: #DEDEDE !important;
+}
+
+.searchBlock {
+  position: relative;
+}
+
+.searchButton {
+  background-color: transparent !important;
+  color: grey !important;
+  border: none !important;
+  position: absolute;
+  padding: 5px;
+  padding-right: 20px;
+  right: 0;
+  top: 0;
+}

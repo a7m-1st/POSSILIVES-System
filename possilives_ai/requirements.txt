@@ -1,0 +1,15 @@
+Flask==3.1.0
+Flask_Cors==5.0.0
+jamaibase==0.3.0
+moviepy==2.1.1
+python-dotenv==1.1.0
+SpeechRecognition==3.13.0
+torch==2.4.1
+transformers==4.50.3
+cloudinary==1.40.0
+google-genai==0.3.8
+requests==2.31.0
+pillow==10.1.0
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
