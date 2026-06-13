@@ -5,8 +5,8 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - KEYCLOAK_ADMIN=soda
-      - KEYCLOAK_ADMIN_PASSWORD=hongyi123
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
       - KC_IMPORT_REALM=true
     command: start-dev --import-realm --hostname-strict=false --proxy-headers=xforwarded
     volumes:
